@@ -137,7 +137,8 @@ GameObject:
   - component: {fileID: 137038621}
   - component: {fileID: 137038620}
   - component: {fileID: 137038625}
-  m_Layer: 0
+  - component: {fileID: 137038626}
+  m_Layer: 6
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,6 +253,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   gravity: 3
+--- !u!114 &137038626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137038619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd2aed941bc3484a91074968ae222ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 137038620}
+  ImpactForce: 200
 --- !u!1 &252564151
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +498,7 @@ GameObject:
   - component: {fileID: 562696632}
   - component: {fileID: 562696631}
   - component: {fileID: 562696630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +593,7 @@ GameObject:
   - component: {fileID: 609834502}
   - component: {fileID: 609834501}
   - component: {fileID: 609834500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +781,7 @@ GameObject:
   - component: {fileID: 872681970}
   - component: {fileID: 872681969}
   - component: {fileID: 872681968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 631eae727fa8a8440b3704995801c94d, type: 2}
+  - {fileID: 2100000, guid: 78230bb6631d8aa49b007244acc22b54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1155,7 +1170,7 @@ GameObject:
   - component: {fileID: 1601190056}
   - component: {fileID: 1601190055}
   - component: {fileID: 1601190054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StoppingRay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1186,7 @@ BoxCollider:
   m_GameObject: {fileID: 1601190053}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1194,7 +1209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c8043420a1023947bc812d1db17715f, type: 2}
+  - {fileID: 2100000, guid: 2d7efdd50dcea44428fc6587c7c71395, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1361,7 +1376,7 @@ GameObject:
   - component: {fileID: 2038304325}
   - component: {fileID: 2038304324}
   - component: {fileID: 2038304323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

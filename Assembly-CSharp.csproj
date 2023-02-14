@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A95A6664-FDBE-EA2C-55E4-88424373FE96}</ProjectGuid>
+    <ProjectGuid>{66A2D3DB-2F13-B82E-1B9F-5D9B83E08BF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,6 +60,7 @@
     <Compile Include="Assets\MouseController.cs" />
     <Compile Include="Assets\Shoot.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\WallBounce.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
