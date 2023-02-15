@@ -42,7 +42,7 @@ public class Shoot : MonoBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(character.transform.position, character.transform.forward, out hit)){
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             if(hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impact_force);
