@@ -26,14 +26,17 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time >= next_fire_time)
+        if (!PauseTransition.isPaused)
         {
-            fire();
-            next_fire_time = Time.time + 1 / fire_rate;
-        }
-        else if (Input.GetButtonUp("Fire1"))
-        {
-            line_renderer.positionCount = 0;
+            if (Input.GetButton("Fire1") && Time.time >= next_fire_time)
+            {
+                fire();
+                next_fire_time = Time.time + 1 / fire_rate;
+            }
+            else if (Input.GetButtonUp("Fire1"))
+            {
+                line_renderer.positionCount = 0;
+            }
         }
     }
 

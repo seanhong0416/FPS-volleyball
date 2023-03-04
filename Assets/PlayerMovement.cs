@@ -26,26 +26,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //for horizontal movement
-        float movement_x = Input.GetAxis("Vertical");
-        float movement_y = Input.GetAxis("Horizontal");
+        if (!PauseTransition.isPaused)
+        {
+            //for horizontal movement
+            float movement_x = Input.GetAxis("Vertical");
+            float movement_y = Input.GetAxis("Horizontal");
 
-        Vector3 final_movement = transform.right * movement_y + transform.forward * movement_x;
+            Vector3 final_movement = transform.right * movement_y + transform.forward * movement_x;
 
-        controller.Move(movement_speed * final_movement * Time.deltaTime);
+            controller.Move(movement_speed * final_movement * Time.deltaTime);
 
+            //for jumping
+            if (on_ground && Input.GetButtonDown("Jump"))
+                velocity.y = jumping_velocity;
+            controller.Move(velocity * Time.deltaTime);
+
+        }
         //for falling
         velocity.y -= gravity * Time.deltaTime;
         on_ground = Physics.CheckSphere(ground_check.position, ground_check_radius, ground_mask);
-        if (on_ground && velocity.y < 0) 
+        if (on_ground && velocity.y < 0)
             velocity.y = -2;
         controller.Move(velocity * Time.deltaTime);
-
-        //for jumping
-        if (on_ground && Input.GetButtonDown("Jump")) 
-            velocity.y = jumping_velocity;
-        controller.Move(velocity * Time.deltaTime);
-        
-
     }
 }

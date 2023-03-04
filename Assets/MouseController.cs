@@ -20,13 +20,16 @@ public class MouseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouse_x = Input.GetAxis("Mouse X") * mouse_sensitivity * Time.deltaTime;
-        float mouse_y = Input.GetAxis("Mouse Y") * mouse_sensitivity * Time.deltaTime;
+        if (!PauseTransition.isPaused)
+        {
+            float mouse_x = Input.GetAxis("Mouse X") * mouse_sensitivity * Time.deltaTime;
+            float mouse_y = Input.GetAxis("Mouse Y") * mouse_sensitivity * Time.deltaTime;
 
-        player_body.Rotate(Vector3.up * mouse_x);
+            player_body.Rotate(Vector3.up * mouse_x);
 
-        x_rotation -= mouse_y;
-        x_rotation = Mathf.Clamp(x_rotation, -90, 90);
-        camera_view.localEulerAngles = Vector3.right * x_rotation;
+            x_rotation -= mouse_y;
+            x_rotation = Mathf.Clamp(x_rotation, -90, 90);
+            camera_view.localEulerAngles = Vector3.right * x_rotation;
+        }
     }
 }
