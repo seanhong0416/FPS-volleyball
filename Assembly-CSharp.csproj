@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scenes\PlayerTeleportation.cs" />
     <Compile Include="Assets\Scenes\RazerPooling.cs" />
     <Compile Include="Assets\Scenes\SetIpFunction.cs" />
+    <Compile Include="Assets\SceneTransitionFunction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
